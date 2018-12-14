@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding center>
+    <ion-slides pager>
+
+        <ion-slide>
+            
+              <img src="../assets/imgs/loc.png" alt="icon busca" class="">
+            
+          <h2>Busca Fácil</h2>
+    <p>Facilitando sua vida indenpendente da Localização</p>
+        </ion-slide>
+        <ion-slide>
+            <button ion-item (click)="abrirfarmacias()">
+            <img src="../assets/imgs/farm.png" alt="" class="img">
+            </button>
+            <h2>Farmácias</h2>
+      <p>Tudo o que precisar </p>
+        </ion-slide>
+        <ion-slide>
+            <button ion-item (click)="abrirlojas()">
+            <img src="../assets/imgs/rest.png" alt="lojas" class="img">
+            </button>
+            <h2>Lojas</h2>
+      <p>As melhores Lojas com preço que cabe em seu bolso</p>
+        </ion-slide>
+      
+        <ion-slide>
+            <button ion-item (click)="abrirrestaurantes()">
+              <img src="../assets/imgs/restautantes.png" alt="restautantes" class="img">
+            </button>
+            <h2>Restaurantes</h2>
+      <p>Deguste a òtima gastronomia Litoranea</p>
+        </ion-slide>
+        <ion-slide>
+            <button ion-item (click)="abrirbares()">
+              <img src="../assets/imgs/bares.png" alt="bares" class="img">
+            </button>
+            <h2>Bares</h2>
+      <p>Se procura diversão , encontre tudo o que precisa para uma noite agradável</p>
+        </ion-slide>
+        
+      
+      </ion-slides>
+ </ion-content>
