@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { storeProvider } from '../../providers/services-user/storeService';
+import { ProductsPage } from './products/products';
+
 
 /**
  * Generated class for the LojasPage page.
@@ -14,12 +17,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'lojas.html',
 })
 export class LojasPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  storeList : any = []
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public storeProvider : storeProvider) {
+    storeProvider.read().subscribe((resp:any)=>{
+      console.log(resp);
+      this.storeList = resp
+    })
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LojasPage');
+
   }
 
+  chosenProduct(product){
+    this.navCtrl.push(ProductsPage,{product});
+  }
 }

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PaguemenosPage } from '../paguemenos/paguemenos';
 import { DjePage } from '../dje/dje';
 import { NossasenhoraPage } from '../nossasenhora/nossasenhora';
+import { ServicesPharmacyProvider } from '../../providers/services-pharmacy/services-pharmacy';
 
 /**
  * Generated class for the FarmaciasPage page.
@@ -18,11 +19,11 @@ import { NossasenhoraPage } from '../nossasenhora/nossasenhora';
 })
 export class FarmaciasPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public pharmacyService:ServicesPharmacyProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FarmaciasPage');
   }
   abrirpaguemenos(){
     this.navCtrl.push(PaguemenosPage)

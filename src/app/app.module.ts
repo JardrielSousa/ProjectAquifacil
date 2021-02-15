@@ -20,6 +20,11 @@ import { FarmaciasPage } from '../pages/farmacias/farmacias';
 import { NossasenhoraPage } from '../pages/nossasenhora/nossasenhora';
 import { PaguemenosPage } from '../pages/paguemenos/paguemenos';
 import { DjePage } from '../pages/dje/dje';
+import { storeProvider } from '../providers/services-user/storeService';
+import { HttpClientModule } from '@angular/common/http';
+import { ServicesPubProvider } from '../providers/services-pub/services-pub';
+import { ServicesRestaurantsProvider } from '../providers/services-restaurants/services-restaurants';
+import { ServicesPharmacyProvider } from '../providers/services-pharmacy/services-pharmacy';
 
 @NgModule({
   declarations: [
@@ -41,7 +46,8 @@ import { DjePage } from '../pages/dje/dje';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -59,12 +65,16 @@ import { DjePage } from '../pages/dje/dje';
     FarmaciasPage,
     NossasenhoraPage,
     PaguemenosPage,
-    DjePage
+    DjePage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    storeProvider,
+    ServicesPubProvider,
+    ServicesRestaurantsProvider,
+    ServicesPharmacyProvider,
   ]
 })
 export class AppModule {}

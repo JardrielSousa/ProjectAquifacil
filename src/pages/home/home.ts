@@ -11,9 +11,10 @@ import { RestaurantesPage } from '../restaurantes/restaurantes';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController){
 
   }
+
   abrirlojas(){
     this.navCtrl.push(LojasPage)
   }
