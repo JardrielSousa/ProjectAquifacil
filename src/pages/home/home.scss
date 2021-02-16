@@ -1,32 +1,5 @@
 page-home {
-    ion-slide .loc{
-      background: url(../assets/imgs/loc.png) no-repeat top center;
-      margin: 0 auto ;
-      width: 50%;
-      height: 250px;
-    }
-    ion-slide .farm{
-      background: url(../assets/imgs/hospital-pharmacy.png) no-repeat top center;
-      margin: 0 auto ;
-      width: auto;
-      height: 500px;
-    }
-    ion-slide .stores{
-      background: url(../assets/imgs/rest.png) no-repeat top center;
-      margin: 0 auto ;
-      width: 70%;
-      height: 500px;
-    }
-    ion-slide .rest{
-      background: url(../assets/imgs/restautantes.png) no-repeat top center;
-      margin: 0 auto ;
-      width: 70%;
-      height: 500px;
-    }
-    ion-slide .pub{
-      background: url(../assets/imgs/bares.png) no-repeat center;
-      margin: 0 auto ;
-      width: 70%;
-      height: 500px;
-    }
+  img{
+    width: 100px;
+  }
 }

@@ -25,27 +25,30 @@
           </ion-toolbar>
         </ion-header>
         <ion-content>
-          <ion-list>          
-            <button ion-item (click)="abrirconf()">
+          <ion-list>
+            <button ion-item (click)="openConfig()">
               Configuração
             </button>
-            <button ion-item (click)="alterarfoto()">
+            <button ion-item (click)="OpenAddProducts()">
+              Adicionar Produtos
+            </button>
+            <button ion-item>
               alterar Foto
             </button>
-            <button ion-item (click)="abrirlojas()">
+            <button ion-item (click)="openStores()">
               Lista de Lojas
-              
+
             </button>
           </ion-list>
         </ion-content>
       </ion-menu>
-      
-      
+
+
       <ion-grid>
           <ion-row>
             <ion-col col-12>
                 <img src="../assets/imgs/perfil.png" alt="icon perfil" class="perfil">
-                <h2>Nome do Usuário</h2>      
+                <h2>Nome do Usuário</h2>
             </ion-col>
           </ion-row>
         </ion-grid>

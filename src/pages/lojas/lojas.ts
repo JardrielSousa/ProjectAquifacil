@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { storeProvider } from '../../providers/services-user/storeService';
-import { ProductsPage } from './products/products';
+import { ProductsPage } from '../products/products';
 
 
 /**
@@ -32,6 +32,6 @@ export class LojasPage {
   }
 
   chosenProduct(product){
-    this.navCtrl.push(ProductsPage,{product});
+    this.navCtrl.push(ProductsPage,{product:product});
   }
 }

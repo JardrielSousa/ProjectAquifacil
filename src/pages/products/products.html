@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>products</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let item of productsList">
+    <ion-card-header>
+      <ion-card-title>{{item.descricao}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-thumbnail slot="start">
+        <img src="../../../assets/imgs/bar.png">
+      </ion-thumbnail>
+      <ion-label>Tamanho:</ion-label>{{item.tamanho}} <br>
+      <ion-label>Valor: </ion-label>{{item.valor}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AddProductsPage } from '../add-products/add-products';
 import { ConfiguracoesPage } from '../configuracoes/configuracoes';
 import { HomePage } from '../home/home';
 import { ListaPage } from '../lista/lista';
@@ -20,24 +21,28 @@ export class PerfilPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-  
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerfilPage');
   }
-  abrirhome(){
+  openHome(){
     this.navCtrl.push(HomePage)
   }
-  abrirperfil(){
+  openProfile(){
     this.navCtrl.push(PerfilPage)
   }
-  abrirconf(){
+  openConfig(){
     this.navCtrl.push(ConfiguracoesPage)
   }
-  abrirlojas(){
+  openStores(){
     this.navCtrl.push(ListaPage)
   }
   closemenu(){
     this.navCtrl.pop()
   }
-  
+
+  OpenAddProducts(){
+    this.navCtrl.push(AddProductsPage)
+  }
+
 }

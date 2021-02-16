@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>addProducts</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form [formGroup]="form" (ngSubmit)="addProducts()">
+    <ion-item>
+      <ion-label>Description</ion-label>
+      <ion-input type="text" formControlName="description" required ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Company</ion-label>
+      <ion-select placeholder="Select One" formControlName="idEmpresa" ok-text="Ok" cancel-text="Dismiss" required>
+          <ion-option *ngFor="let store of storeList" [value]="store.id" >{{store.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-label>Type:</ion-label>
+    <ion-segment (ionChange)="typeLengthMethod($event)" value="typeLength">
+      <ion-segment-button value="typeLength">
+        <ion-label>Lengths</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="typeNumbers">
+        <ion-label>Numbers</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-item *ngIf="typeLength">
+      <ion-label>Lengths</ion-label>
+      <ion-input formControlName="length" name="length" required></ion-input>
+      <ion-select placeholder="Select One" formControlName="idEmpresa" ok-text="Ok" cancel-text="Dismiss" required>
+        <ion-option *ngFor="let len of length" [value]="len[len]" >{{len}}</ion-option>
+    </ion-select>
+    </ion-item>
+    <ion-item *ngIf="typeNumbers">
+      <ion-label>Numbers</ion-label>
+      <ion-select placeholder="Select One" formControlName="length" ok-text="Ok" cancel-text="Dismiss" required>
+        <ion-option *ngFor="let num of numbers">{{num}}</ion-option>
+    </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Value</ion-label>
+      <ion-input formControlName="value" name="value" required></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Add Product</button>
+  </form>
+</ion-content>
