@@ -1,8 +1,7 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
@@ -16,15 +15,14 @@ import { ListaPage } from '../pages/lista/lista';
 import { BaresPage } from '../pages/bares/bares';
 import { LojasPage } from '../pages/lojas/lojas';
 import { RestaurantesPage } from '../pages/restaurantes/restaurantes';
-import { FarmaciasPage } from '../pages/farmacias/farmacias';
-import { NossasenhoraPage } from '../pages/nossasenhora/nossasenhora';
-import { PaguemenosPage } from '../pages/paguemenos/paguemenos';
-import { DjePage } from '../pages/dje/dje';
 import { storeProvider } from '../providers/services-user/storeService';
 import { HttpClientModule } from '@angular/common/http';
 import { ServicesPubProvider } from '../providers/services-pub/services-pub';
 import { ServicesRestaurantsProvider } from '../providers/services-restaurants/services-restaurants';
 import { ServicesPharmacyProvider } from '../providers/services-pharmacy/services-pharmacy';
+import { ProductsPage } from '../pages/products/products';
+import { ProductsProvider } from '../providers/products/products';
+import { AddProductsPage } from '../pages/add-products/add-products';
 
 @NgModule({
   declarations: [
@@ -39,10 +37,9 @@ import { ServicesPharmacyProvider } from '../providers/services-pharmacy/service
     BaresPage,
     RestaurantesPage,
     LojasPage,
-    FarmaciasPage,
-    NossasenhoraPage,
-    PaguemenosPage,
-    DjePage
+    ProductsPage,
+    AddProductsPage,
+
   ],
   imports: [
     BrowserModule,
@@ -50,6 +47,9 @@ import { ServicesPharmacyProvider } from '../providers/services-pharmacy/service
     HttpClientModule
   ],
   bootstrap: [IonicApp],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   entryComponents: [
     MyApp,
     AboutPage,
@@ -62,10 +62,8 @@ import { ServicesPharmacyProvider } from '../providers/services-pharmacy/service
     BaresPage,
     RestaurantesPage,
     LojasPage,
-    FarmaciasPage,
-    NossasenhoraPage,
-    PaguemenosPage,
-    DjePage,
+    ProductsPage,
+    AddProductsPage
   ],
   providers: [
     StatusBar,
@@ -75,6 +73,8 @@ import { ServicesPharmacyProvider } from '../providers/services-pharmacy/service
     ServicesPubProvider,
     ServicesRestaurantsProvider,
     ServicesPharmacyProvider,
-  ]
+    ProductsProvider,
+    AddProductsPage
+  ],
 })
 export class AppModule {}
