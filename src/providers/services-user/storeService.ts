@@ -12,4 +12,12 @@ export class storeProvider {
     return this.http.get(`${this.api}`)
   }
 
+  readBy(store){
+    return this.http.get(`${this.api}?idEmpresa=`+store.id)
+  }
+
+  save(store){
+    return this.http.post(`${this.api}`,store)
+  }
+
 }

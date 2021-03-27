@@ -32,10 +32,10 @@ typeNumbers:boolean=false;
 
   form = this.fb.group({
     id : [''] ,
-    idEmpresa : ['',[Validators.required]] ,
+    idEmpresa : [0,[Validators.required]] ,
     description : ['',[Validators.required,Validators.minLength(4),Validators.maxLength(256)]],
-    length : ['',[Validators.required,Validators.minLength(1),Validators.maxLength(256)]],
-    value : ['',[Validators.required,Validators.minLength(1),Validators.maxLength(256)]]
+    length : [0,[Validators.required,Validators.minLength(1),Validators.maxLength(256)]],
+    value : [0.00,[Validators.required,Validators.minLength(1),Validators.maxLength(256)]]
   })
 
   ionViewDidLoad() {

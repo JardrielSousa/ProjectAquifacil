@@ -23,6 +23,7 @@ import { ServicesPharmacyProvider } from '../providers/services-pharmacy/service
 import { ProductsPage } from '../pages/products/products';
 import { ProductsProvider } from '../providers/products/products';
 import { AddProductsPage } from '../pages/add-products/add-products';
+import { AddStorePage } from '../pages/add-store//add-store';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { AddProductsPage } from '../pages/add-products/add-products';
     LojasPage,
     ProductsPage,
     AddProductsPage,
-
+    AddStorePage
   ],
   imports: [
     BrowserModule,
@@ -63,7 +64,9 @@ import { AddProductsPage } from '../pages/add-products/add-products';
     RestaurantesPage,
     LojasPage,
     ProductsPage,
-    AddProductsPage
+    AddProductsPage,
+    AddStorePage
+    
   ],
   providers: [
     StatusBar,

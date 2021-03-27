@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "idEmpresa": 1,
+      "description": "calção mauricinho",
+      "value": 25,
+      "length": 2
+    },
+    {
+      "id": 2,
+      "idEmpresa": 2,
+      "description": "fffffffffff",
+      "length": "P ao G",
+      "value": "20"
+    },
+    {
+      "id": 3,
+      "idEmpresa": 3,
+      "description": "ggggggg",
+      "length": "P ao GG",
+      "value": "0225"
+    }
+  ],
+  "store": [
+    {
+      "id": 1,
+      "name": "jgmultimarcas27",
+      "owers": "jardriel e gaby"
+    },
+    {
+      "id": 2,
+      "name": "ffff",
+      "owers": "ffff"
+    },
+    {
+      "id": 3,
+      "name": "ggggg",
+      "owers": "ggggg"
+    }
+  ]
+}

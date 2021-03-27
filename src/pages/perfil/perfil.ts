@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AddProductsPage } from '../add-products/add-products';
+import { AddStorePage } from '../add-store/add-store';
 import { ConfiguracoesPage } from '../configuracoes/configuracoes';
 import { HomePage } from '../home/home';
 import { ListaPage } from '../lista/lista';
@@ -45,4 +46,7 @@ export class PerfilPage {
     this.navCtrl.push(AddProductsPage)
   }
 
+  OpenAddStore(){
+    this.navCtrl.push(AddStorePage)
+  }
 }
