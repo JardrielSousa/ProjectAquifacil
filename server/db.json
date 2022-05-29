@@ -20,6 +20,13 @@
       "description": "ggggggg",
       "length": "P ao GG",
       "value": "0225"
+    },
+    {
+      "id": 4,
+      "idEmpresa": 1,
+      "description": "aaaa",
+      "length": "40",
+      "value": "100"
     }
   ],
   "store": [

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { storeProvider } from '../../providers/services-user/storeService';
 /**
  * Generated class for the ListaPage page.
  *
@@ -14,8 +14,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'lista.html',
 })
 export class ListaPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  storeList : any = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public storeProvider:storeProvider) {
+    storeProvider.read()
+    .subscribe((resp:any)=>{
+      this.storeList = resp;
+    })
   }
 
   ionViewDidLoad() {
